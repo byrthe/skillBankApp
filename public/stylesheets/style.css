@@ -22,6 +22,8 @@ background: rgb(30,30,30); */
     font-style: normal; 
     font-weight: bold;
 }
+
+/* header section */
 header{
     
 }
@@ -37,6 +39,9 @@ header h1{
     margin: 0;
     padding:0;
 }
+header .title{
+    flex:2;
+}
 header #navi{
     text-transform: uppercase;
     font-size:3em;
@@ -45,7 +50,58 @@ header #navi{
     padding: 0;
     text-align: right;
     margin:0 0 30px 0;
+    flex:1;
 }
+.card-create{
+    background-color: rgb(171, 171, 171);
+    color: rgb(30,30,30);
+    padding:15px;
+    border-radius: 15px;
+}
+.inputButton{
+    padding: 8px 15px 10px 15px;
+    margin: 10px;
+    color:rgb(30,30,30);
+    border-radius: 15px; 
+    border: 1px solid rgb(30,30,30);
+    background-color: cadetblue;
+}
+#descInput{
+
+}
+input{
+    font-size:16px;
+    font-style: italic;
+    color: grey;
+    border-radius: 15px;
+    padding:5px;
+    margin:5px;
+}
+form ul{
+    margin:0;
+    padding:0;
+    list-style: none;
+    text-align: left;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
+
+.card-create-category{
+    padding:10px 15px;
+    width: 100px;
+    height: 35px;
+    border-radius: 10px 10px 0 0;
+    transform: rotate(90deg) translate(38px, 50px);
+    font-size:1.2em;
+    background-color: grey;
+    color:rgb(30,30,30);
+    text-align: center;
+    z-index: -10;
+    // should put a js thing that reads how wide the tab is, and put that value in the translate x
+}
+
+/* row of category buttons */
 
 #categories{ 
     padding:30px;
@@ -107,6 +163,7 @@ h2{
     margin: 25px 100px;
     display: flex;
     justify-content: center;
+    text-align: left;
 }
 .card-request, .card-offer{
     background-color: beige;
@@ -118,7 +175,6 @@ h2{
     text-transform: uppercase;
     font-size: 1.5em;
     letter-spacing: 0.1px;
-    margin-bottom: 15px;
 }
 .card-wrapper img{
     margin-top:10px;
@@ -150,3 +206,49 @@ h2{
 }
 
 // js random rotate of the cards
+
+
+
+// accordion styles
+
+/* (A) ACCORDION WRAPPER */
+.awrap {
+
+  }
+  
+  /* (B) HEADER TAB */
+  /* (B1) TAB ITSELF */
+  .ahead {
+    position: relative;
+    cursor: pointer;
+  }
+  /* (B2) RIGHT ARROW */
+  .ahead:after {
+    position: absolute;
+    right: 10px;
+    transition: transform 0.2s;
+  }
+  
+  /* (C) CONTENT TAB */
+  /* (C1) TAB ITSELF - CLOSED BY DEFAULT */
+  .abody {
+    overflow: hidden;
+    transition: all 0.4s ease-out; 
+    max-height: 0; 
+    height: auto;
+    font-size:16px;
+    margin-left:150px;
+    text-transform: none;
+  }
+  .about-body{
+    font-size:20px;
+  }
+  /* (C2) OPEN TAB - DOWN ARROW */
+  .ahead.open:after {
+    transform: rotate(90deg);
+  }
+  /* (C2) OPEN TAB - SHOW CONTENT */
+  .ahead.open + .abody {
+    max-height: 600px; 
+    padding: 10px;
+  }

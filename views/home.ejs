@@ -15,10 +15,83 @@
       <div class="title">
         <h1 class="bold">Skill Bank</h1>
       </div>
-      <ul id="navi" class="bold">
-        <li><a>about</a></li>
+      
+        <!-- <li><a>about</a></li>
         <li><a>create a card</a></li>
-      </ul>
+      </ul> -->
+
+      <div id="navi" class="bold">
+      
+        <div class="ahead"><a>About</a></div>
+        <div class="abody about-body">
+          Skill Bank is a simple tool for exchanging skills and learning from eachother. Especially for the DIY and DIT communities in Brussels.<br><br>
+          This is not a place for paid services, but really a place to connect and advance our knowledge collectively.
+        </div>
+  
+        <div class="ahead"><a>Create a card</a></div>
+        <div class="abody">
+          Add your request or offer with the following form. You will be updated via the email address you provide.
+          <div class="card-wrapper">
+            <div class="card-create">
+              
+              <form class="form" action="">
+                <input type="text" id="titleInput" placeholder="title"><br>
+                <input type="text" id="descInput" placeholder="the skill or tools you have to offer"><br>
+                <input type="text" id="nameInput" placeholder="your name or moniker"><br>
+                <input type="text" id="locationInput" placeholder="where?"><br>
+                <label for="categories">Choose the right category:</label>
+                <ul>
+                  <li>
+                    <input id="r1" type="radio" name="fixing" value="1">
+                    <label for="r1">fixing</label>
+                  </li>
+                  <li>
+                    <input id="r2" type="radio" name="music" value="2">
+                    <label for="r2">music</label>
+                  </li>
+                  <li>
+                    <input id="r3" type="radio" name="health" value="3">
+                    <label for="r3">health & care</label>
+                  </li>
+                  <li>
+                    <input id="r4" type="radio" name="creativity" value="4">
+                    <label for="r4">creativity</label>
+                  </li>
+                  <li>
+                    <input id="r5" type="radio" name="organisation" value="5">
+                    <label for="r5">organisation</label>
+                  </li>
+                  <li>
+                    <input id="r6" type="radio" name="plants" value="6">
+                    <label for="r6">plants</label>
+                  </li>
+                  <li>
+                    <input id="r7" type="radio" name="construction" value="7">
+                    <label for="r7">construction</label>
+                  </li>
+                  <li>
+                    <input id="r8" type="radio" name="language" value="8">
+                    <label for="r8">language</label>
+                  </li>
+                  <li>
+                    <input id="r9" type="radio" name="misc" value="9">
+                    <label for="r9">misc</label>
+                  </li>
+                </ul>
+                <input type="text" id="emailInput" placeholder="your emailaddress to follow up">
+                <!--- also get the date, on click and store in a column in the db-->
+                <input type="button" class="inputButton bold" id="inputButton" value="create a new card">
+              </form>
+
+            </div>
+            <div class="card-create-category bold">?</div>
+          </div><!--end card-wrapper-->
+
+        </div><!--end abody-->
+  
+      </div>
+
+
     </div>
   </header>  
   <section id="categories">
@@ -27,9 +100,9 @@
       <li class="health"><a href="#" class="bold">health & care</a></li>
       <li class="music"><a href="#" class="bold">music</a></li>
       <li class="creativity"><a href="#" class="bold">creativity</a></li>
-      <li class="construction"><a href="#" class="bold">construction</a></li>
       <li class="orga"><a href="#" class="bold">organisation</a></li>
       <li class="plants"><a href="#" class="bold">plants</a></li>
+      <li class="construction"><a href="#" class="bold">construction</a></li>
       <li class="language"><a href="#" class="bold">language</a></li>
       <li class="misc"><a href="#" class="bold">misc</a></li>
     </ul>
@@ -125,7 +198,12 @@
 
     </div>
   </section>
-  
+
+  <script>
+  window.addEventListener("DOMContentLoaded", function(){
+    accordize("navi", true);
+  });
+  </script>
   <script src="static/scripts/index.js"></script>
 </body>
 </html>

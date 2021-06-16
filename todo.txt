@@ -1,0 +1,33 @@
+// CSS
+
+> fix width problem with the card boxes
+> fix label size and floating issues
+
+
+// DB
+    > create table offerCards
+        > title TEXT
+        > desc
+        > name
+        > email
+        > date
+        > location
+        > img
+        > 
+    > create table categories
+
+// JS 
+
+    / clientside
+        > addeventlistener #buttonInput
+        > take inputs from the form and send to index.js
+
+        > make sure a new entry appears automatically on the page after save
+        
+        bonus:
+        > take current date and store into the database
+        > random rotate(deg) on cards
+
+    / serverside
+        > store data from clientside into database
+        > push new card so it can be displayed on the page
