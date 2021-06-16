@@ -4,11 +4,128 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,
   initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="static/stylesheet/style.css">
-  <title>Document</title>
+  <link rel="stylesheet" href="/static/stylesheets/style.css" type="text/css">
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/notcouriersans" type="text/css"/> 
+  <title>Skill Bank</title>
 </head>
 <body>
 
+  <header>
+    <div class="flex-wrapper">
+      <div class="title">
+        <h1 class="bold">Skill Bank</h1>
+      </div>
+      <ul id="navi" class="bold">
+        <li><a>about</a></li>
+        <li><a>create a card</a></li>
+      </ul>
+    </div>
+  </header>  
+  <section id="categories">
+    <ul>
+      <li class="fixing"><a href="#" class="bold">fixing</a></li>
+      <li class="health"><a href="#" class="bold">health & care</a></li>
+      <li class="music"><a href="#" class="bold">music</a></li>
+      <li class="creativity"><a href="#" class="bold">creativity</a></li>
+      <li class="construction"><a href="#" class="bold">construction</a></li>
+      <li class="orga"><a href="#" class="bold">organisation</a></li>
+      <li class="plants"><a href="#" class="bold">plants</a></li>
+      <li class="language"><a href="#" class="bold">language</a></li>
+      <li class="misc"><a href="#" class="bold">misc</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <div id="main-content">
+      
+      <div id="left">
+        <h2 class="bold">i want to learn</h2>
+        <div class="card-wrapper">
+          <div class="card-request">
+            <div class="title bold">Intro into Ableton</div>
+            <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia sed id facere officia rem itaque veniam, cupiditate obcaecati impedit doloremque sequi velit amet nesciunt dignissimos vel, vitae nostrum ipsam. Veritatis.</div>
+            <div class="info-wrapper">
+              <div class="name">added by:<br><span class="bold">name name</span></div>
+              <div class="date">added on:<br><span class="bold">12-06-2021</span></div>
+              <div class="location">location:<br><span class="bold">Brussels area</span></div>
+            </div>
+          </div>
+          <div class="card-request-category music bold">music</div>
+        </div><!--end card-wrapper-->
+
+        <div class="card-wrapper">
+          <div class="card-request">
+            <div class="title bold">Gardening</div>
+            <div class="desc">
+              I just moved to a new place where we have a big garden. I’m eager to work on it but no idea how to start. Is there someone with experience who is willing to get me started? There is also a dead tree, with which something needs to happen i think...  
+            </div>
+            <img src="http://www.gardeninginfozone.com/wp-content/uploads/2010/09/neglected-garden-dead-tree.jpg">
+            <div class="info-wrapper">
+              <div class="name">added by:<br><span class="bold">name name</span></div>
+              <div class="date">added on:<br><span class="bold">01-03-2021</span></div>
+              <div class="location">location:<br><span class="bold">Woluwe</span></div>
+            </div>
+          </div>
+          <div class="card-request-category plants bold">plants</div>
+        </div><!--end card-wrapper-->
+
+        <div class="card-wrapper">
+          <div class="card-request">
+            <div class="title bold">Plumbing</div>
+            <div class="desc">
+              Not my favorite job, but i rather learn this than pay the plumbing team a high price. Is there anyone knows how to fix a problem with my shower evacuation? In fermentum posuere. Egestas erat imperdiet sed euismod. Dui accumsan sit amet nulla facilisi morbi. At imperdiet dui accumsan sit amet nulla. Sed nisi lacus sed viverra. Tristique sollicitudin nibh sit amet commodo nulla facilisi.
+            </div>
+            <div class="info-wrapper">
+              <div class="name">added by:<br><span class="bold">name name</span></div>
+              <div class="date">added on:<br><span class="bold">12-06-2021</span></div>
+              <div class="location">location:<br><span class="bold">Brussels area</span></div>
+            </div>
+          </div>
+          <div class="card-request-category construction bold">constr</div>
+        </div><!--end card-wrapper-->
+
+      </div>
+
+      <div id="right">
+        <h2 class="bold">i can offer</h2>
+        <div class="card-wrapper">
+          <div class="card-request">
+            <div class="title bold">Bike Atelier</div>
+            <div class="desc">
+              A new bike atelier is opening. You can come and fix your own bike. There are all the tools you need and some people with experience to show you how to get started. It’s the point to share knowledge and learn together. You are very welcome too, if you have know-how on bikes and want to help others. The atelier works on prix-libre.<br>
+              At imperdiet dui accumsan sit amet nulla. Sed nisi lacus sed viverra. Tristique sollicitudin nibh sit amet commodo nulla facilisi nullam. Morbi tristique senectus et netus et malesuada. Viverra justo nec ultrices dui sapien. Aliquam faucibus purus in massa. Vitae congue mauris rhoncus aenean vel elit scelerisque. Duis at tellus at urna. Volutpat maecenas volutpat blandit aliquam etiam erat. Est placerat in egestas erat imperdiet. Ornare arcu odio ut sem.
+            </div>
+            <div class="info-wrapper">
+              <div class="name">added by:<br><span class="bold">name name</span></div>
+              <div class="date">added on:<br><span class="bold">12-06-2021</span></div>
+              <div class="location">location:<br><span class="bold">Anderlecht</span></div>
+            </div>
+          </div>
+          <div class="card-request-category fixing bold">fixing</div>
+        </div><!--end card-wrapper-->
+
+        <div class="card-wrapper">
+          <div class="card-request">
+            <div class="title bold">Conversation Tables</div>
+            <div class="desc">We are hosting weekly conversation tables for french and dutch learners at our local café in Forest. Be welcome to join us around 18h on Wednesdays. Snacks provided ;-)</div>
+            <div class="info-wrapper">
+              <div class="name">added by:<br><span class="bold">name name</span></div>
+              <div class="date">added on:<br><span class="bold">12-06-2021</span></div>
+              <div class="location">location:<br><span class="bold">Forest Bruxelles</span></div>
+            </div>
+          </div>
+          <div class="card-request-category language bold">lang</div>
+        </div><!--end card-wrapper-->
+
+        
+
+
+
+      </div>
+
+    </div>
+  </section>
+  
   <script src="static/scripts/index.js"></script>
 </body>
 </html>
