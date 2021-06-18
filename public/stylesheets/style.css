@@ -92,13 +92,13 @@ form ul{
     width: 100px;
     height: 35px;
     border-radius: 10px 10px 0 0;
-    transform: rotate(90deg) translate(38px, 50px);
+    transform: rotate(90deg) translate(38px, 25px);
     font-size:1.2em;
     background-color: grey;
     color:rgb(30,30,30);
     text-align: center;
     z-index: -10;
-    // should put a js thing that reads how wide the tab is, and put that value in the translate x
+    /* should put a js thing that reads how wide the tab is, and put that value in the translate x */
 }
 
 /* row of category buttons */
@@ -160,7 +160,7 @@ h2{
     letter-spacing: 1px;
 }
 .card-wrapper{
-    margin: 25px 100px;
+    margin: 25px 25px;
     display: flex;
     justify-content: center;
     text-align: left;
@@ -170,6 +170,8 @@ h2{
     color: rgb(30,30,30);
     padding:15px;
     border-radius: 15px;
+    width: 650px;
+    overflow-wrap: break-word;
 }
 .title{
     text-transform: uppercase;
@@ -193,23 +195,23 @@ h2{
 }
 .card-request-category{
     padding:10px 15px;
-    width: 300px;
+    width: auto;
     height: 35px;
     border-radius: 10px 10px 0 0;
-    transform: rotate(90deg) translate(35px, 40px);
+    transform-origin:  bottom left;
+    transform: rotate(90deg) translate(-55px, 10px);
     font-size:1.2em;
-    
     color:rgb(30,30,30);
     text-align: center;
     z-index: -10;
-    // should put a js thing that reads how wide the tab is, and put that value in the translate x
+    /* should put a js thing that reads how wide the tab is, and put that value in the translate x */
 }
 
-// js random rotate of the cards
+/* // js random rotate of the cards */
 
 
 
-// accordion styles
+/* // accordion styles */
 
 /* (A) ACCORDION WRAPPER */
 .awrap {

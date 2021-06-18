@@ -2,7 +2,7 @@
 const express = require("express");
 const app = express();
 
-const myFirstCOntroller = require("./controllers/controller")
+const controller = require("./controllers/controller")
 
 // app setup
 app.use(express.json())
@@ -17,6 +17,15 @@ app.get('/',(req, res) => {
 
 
 // Create here your api setup
+
+app.post('/api/skillBank/addOffer', (req, res) => {
+  console.log('from the brain i print:', req.body);
+  controller.addOfferToDB(req.body);
+});
+
+app.post('/api/skillBank/allOffers', (req, res) => {
+  controller.fetchAllOffersFromDB(res);
+})
 
 
 

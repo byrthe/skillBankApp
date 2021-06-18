@@ -1,33 +1,20 @@
 // CSS
 
-> fix width problem with the card boxes
-> fix label size and floating issues
+> fix width problem with the widht of the card boxes and at scalability
 
+> input radio input (categories) DB as well
+> see how to relate to the categories db
 
-// DB
-    > create table offerCards
-        > title TEXT
-        > desc
-        > name
-        > email
-        > date
-        > location
-        > img
-        > 
-    > create table categories
+> show only the rows where category == selected category button
 
-// JS 
+> make an image input
 
-    / clientside
-        > addeventlistener #buttonInput
-        > take inputs from the form and send to index.js
+> random rotate(deg) on cards
 
-        > make sure a new entry appears automatically on the page after save
-        
-        bonus:
-        > take current date and store into the database
-        > random rotate(deg) on cards
+>enter this so the form is empty after use
+    inputTitle.value = "";
+    inputMethod.value ="";
+    inputIngredient.value="";
+    inputRanking5.value="";
 
-    / serverside
-        > store data from clientside into database
-        > push new card so it can be displayed on the page
+ 
