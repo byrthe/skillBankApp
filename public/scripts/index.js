@@ -17,7 +17,7 @@ const catPlants = document.querySelector('#r6');
 const catConstruction = document.querySelector('#r7');
 const catLanguage = document.querySelector('#r8');
 const catMisc = document.querySelector('#r9');
-
+const radioInput = "?";
 // variables of card to fill in
 const offerBox = document.querySelector('#right');
 // const currentDate = ;
@@ -49,45 +49,24 @@ inputButton.addEventListener('click', (e) => {
     console.log(nameInput.value);
     console.log(locationInput.value);
     console.log(emailInput.value);
-
-    if(catFix.checked==true){
-        console.log(catFix.value);
-    }else if (catMusic.checked==true) {
-        console.log(catMusic.value);
-    } else if (catHealth.checked==true){
-        console.log(catHealth.value);
-    }else if (catCreativity.checked==true){
-        console.log(catCreativity.value);
-    }else if (catOrganisation.checked==true){
-        console.log(catOrganisation.value);
-    }else if (catPlants.checked==true){
-        console.log(catPlants.value)
-    }else if (catConstruction.checked==true){
-        console.log(catConstruction.value);
-    }else if (catLanguage.checked==true){
-        console.log(catLanguage.value);
-    }else if (catMisc.checked==true){
-        console.log(catMisc.value);
-    }else{
-        alert('please select a category');
-    }
     
-    offerBox.insertAdjacentHTML('beforeend', 
-    `<div class="card-wrapper">
-          <div class="card-request">
-            <div class="title bold">${titleInput.value}</div>
-            <div class="desc">${descInput.value}</div>
-            <div class="info-wrapper">
-              <div class="name">added by:<br><span class="bold">${nameInput.value}</span></div>
-              <div class="date">added on:<br><span class="bold">12-06-2021</span></div>
-              <div class="location">location:<br><span class="bold">${locationInput.value}</span></div>
-            </div>
-          </div>
-          <div class="card-request-category music bold"></div>
-        </div><!--end card-wrapper--></div>`
-    );
-    sendOfferToServer({inputTitle: titleInput.value, inputDesc: descInput.value, inputName: nameInput.value, inputEmail: emailInput.value, inputLocation: locationInput.value});
+    const rbs = document.querySelectorAll('input[name="cat"]');
+    let selectedValue;
+    for (const rb of rbs) {
+        if (rb.checked) {
+            selectedValue = rb.value;
+            break;
+        }
+    };
+            
+    sendOfferToServer({inputTitle: titleInput.value, inputDesc: descInput.value, inputName: nameInput.value, inputEmail: emailInput.value, inputLocation: locationInput.value, inputRadio: selectedValue});
+    console.log({inputRadio: selectedValue});
+
+    location.reload();
 });
+
+
+;
 
 const fetchAllOffersFromDB = () => {
     fetch('/api/skillBank/allOffers', {
@@ -100,8 +79,12 @@ const fetchAllOffersFromDB = () => {
     .then(data => {
       console.log('Success:', data);
       data.input.forEach((input) => {
+       // get random number between -5 and 5
+        const randomAngle = Math.ceil(Math.random() * 4) * (Math.round(Math.random()) ? 1 : -1)
+
+        // insert cards from de DB
         offerBox.insertAdjacentHTML('beforeend', 
-            `<div class="card-wrapper">
+            `<div class="card-wrapper" style="transform: rotate(${randomAngle}deg);">
                 <div class="card-request">
                     <div class="title bold">${input.title}</div>
                     <div class="desc">${input.desc}</div>
@@ -111,13 +94,12 @@ const fetchAllOffersFromDB = () => {
                     <div class="location">location:<br><span class="bold">${input.location}</span></div>
                     </div>
                 </div>
-                <div class="card-request-category music bold">${input.category}</div>
+                <div class="card-request-category ${input.category} bold">${input.category}</div>
                 </div><!--end card-wrapper-->
             </div>`
-            // input.columnname
+            
             );
       })
-    // selectAllRecipies();
     })
     .catch((error) => {
       console.error('Error:', error);

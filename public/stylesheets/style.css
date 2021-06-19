@@ -172,6 +172,7 @@ h2{
     border-radius: 15px;
     width: 650px;
     overflow-wrap: break-word;
+    margin-bottom:15px;
 }
 .title{
     text-transform: uppercase;

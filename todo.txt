@@ -1,4 +1,3 @@
-// CSS
 
 > fix width problem with the widht of the card boxes and at scalability
 
@@ -17,4 +16,7 @@
     inputIngredient.value="";
     inputRanking5.value="";
 
+> fix the create card card looks and functionality
  
+> make sure fields are required and form is not finished when not filled out propoerly
+ > make sure email is actually an email address
