@@ -7,6 +7,7 @@ const titleInput = document.querySelector('#titleInput');
 const descInput = document.querySelector('#descInput');
 const nameInput = document.querySelector('#nameInput');
 const locationInput = document.querySelector('#locationInput');
+const imageInput = document.querySelector('#imageInput');
 const emailInput = document.querySelector('#emailInput');
 const catFix = document.querySelector('#r1');
 const catMusic = document.querySelector('#r2');
@@ -48,6 +49,7 @@ inputButton.addEventListener('click', (e) => {
     console.log(descInput.value);
     console.log(nameInput.value);
     console.log(locationInput.value);
+    console.log(imageInput.value);
     console.log(emailInput.value);
     
     const rbs = document.querySelectorAll('input[name="cat"]');
@@ -59,7 +61,7 @@ inputButton.addEventListener('click', (e) => {
         }
     };
             
-    sendOfferToServer({inputTitle: titleInput.value, inputDesc: descInput.value, inputName: nameInput.value, inputEmail: emailInput.value, inputLocation: locationInput.value, inputRadio: selectedValue});
+    sendOfferToServer({inputTitle: titleInput.value, inputDesc: descInput.value, inputName: nameInput.value, inputEmail: emailInput.value, inputLocation: locationInput.value,inputImage: imageInput.value, inputRadio: selectedValue});
     console.log({inputRadio: selectedValue});
 
     location.reload();
@@ -81,13 +83,17 @@ const fetchAllOffersFromDB = () => {
       data.input.forEach((input) => {
        // get random number between -5 and 5
         const randomAngle = Math.ceil(Math.random() * 4) * (Math.round(Math.random()) ? 1 : -1)
-
+        let showToggle = "imgHide";
+        if(input.img != null){
+          showToggle = "imgShow";
+        };
         // insert cards from de DB
         offerBox.insertAdjacentHTML('beforeend', 
             `<div class="card-wrapper" style="transform: rotate(${randomAngle}deg);">
                 <div class="card-request">
                     <div class="title bold">${input.title}</div>
                     <div class="desc">${input.desc}</div>
+                    <img class="${showToggle}" src="${input.img}">
                     <div class="info-wrapper">
                     <div class="name">added by:<br><span class="bold">${input.name}</span></div>
                     <div class="date">added on:<br><span class="bold">${input.date}</span></div>
@@ -98,7 +104,8 @@ const fetchAllOffersFromDB = () => {
                 </div><!--end card-wrapper-->
             </div>`
             
-            );
+        );
+        
       })
     })
     .catch((error) => {

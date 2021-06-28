@@ -8,7 +8,7 @@ const addOfferToDB = (offerFromTheBrain) => {
       let db = new sqlite3.Database('./db/db.skillbank');
   
       // insert one row into the langs table
-      db.run(`INSERT INTO offerArchive (title, desc, name, email, location, date, category, offer) VALUES(?, ?, ?, ?, ?, CURRENT_DATE, ?, 1)`, [offerFromTheBrain.inputTitle, offerFromTheBrain.inputDesc, offerFromTheBrain.inputName, offerFromTheBrain.inputEmail, offerFromTheBrain.inputLocation, offerFromTheBrain.inputRadio], function(err) {
+      db.run(`INSERT INTO offerArchive (title, desc, name, email, location, img, date, category, offer) VALUES(?, ?, ?, ?, ?, ?, CURRENT_DATE, ?, 1)`, [offerFromTheBrain.inputTitle, offerFromTheBrain.inputDesc, offerFromTheBrain.inputName, offerFromTheBrain.inputEmail, offerFromTheBrain.inputLocation, offerFromTheBrain.inputImage, offerFromTheBrain.inputRadio], function(err) {
         if (err) {
           return console.log(err.message);
         }
