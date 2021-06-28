@@ -39,7 +39,7 @@ header #navi{
     flex:1;
 }
 .card-create{
-    background-color: rgb(30,30,30);
+    background-color: rgb(40, 40, 40);
     color: beige;
     border: 1px dashed beige;
     padding:15px;
@@ -261,14 +261,18 @@ h2{
   /* (C1) TAB ITSELF - CLOSED BY DEFAULT */
   .abody {
     overflow: hidden;
-    transition: all 0.4s ease-out; 
+    transition: all 0.4s ease; 
     max-height: 0; 
     height: auto;
     font-size:16px;
     text-transform: none;
   }
+  .abody p{
+      font-size: 25px;
+  }
   .about-body{
-    font-size:20px;
+    font-size:25px;
+    line-height: 0.9em;
   }
   /* (C2) OPEN TAB - DOWN ARROW */
   .ahead.open:after {
