@@ -11,89 +11,90 @@
 <body>
 
   <header>
+    
     <div class="flex-wrapper">
-      <div class="title">
-        <h1 class="bold">Skill Bank</h1>
-      </div>
-      
-        <!-- <li><a>about</a></li>
-        <li><a>create a card</a></li>
-      </ul> -->
-
-      <div id="navi" class="bold">
-      
-        <div class="ahead"><a>About</a></div>
+      <div id="navi">
+        <div class="title">
+          <h1 class="ahead bold"><a>Skill Bank</a></h1>
+        </div>
         <div class="abody about-body">
           Skill Bank is a simple tool for exchanging skills and learning from eachother. Especially for the DIY and DIT communities in Brussels.<br><br>
           This is not a place for paid services, but really a place to connect and advance our knowledge collectively.
         </div>
-  
-        <div class="ahead"><a>Create a card</a></div>
+
+        <div class="ahead bold"><a>Create a card</a></div>
         <div class="abody">
           Add your request or offer with the following form. You will be updated via the email address you provide.
-          <div class="card-wrapper">
+          <div class="create-card-wrapper">
             <div class="card-create">
-              
-              <form class="form" action="">
-                <input type="text" id="titleInput" placeholder="title"><br>
-                <input type="text" id="descInput" placeholder="the skill or tools you have to offer"><br>
-                <input type="text" id="nameInput" placeholder="your name or moniker"><br>
-                <input type="text" id="locationInput" placeholder="where?"><br>
-                <label for="categories">Choose the right category:</label>
-                <ul>
-                  <li>
-                    <input id="r1" type="radio" name="cat" value="fixing">
-                    <label for="r1">fixing</label>
-                  </li>
-                  <li>
-                    <input id="r2" type="radio" name="cat" value="music">
-                    <label for="r2">music</label>
-                  </li>
-                  <li>
-                    <input id="r3" type="radio" name="cat" value="health">
-                    <label for="r3">health & care</label>
-                  </li>
-                  <li>
-                    <input id="r4" type="radio" name="cat" value="creativity">
-                    <label for="r4">creativity</label>
-                  </li>
-                  <li>
-                    <input id="r5" type="radio" name="cat" value="organisation">
-                    <label for="r5">organisation</label>
-                  </li>
-                  <li>
-                    <input id="r6" type="radio" name="cat" value="plants">
-                    <label for="r6">plants</label>
-                  </li>
-                  <li>
-                    <input id="r7" type="radio" name="cat" value="construction">
-                    <label for="r7">construction</label>
-                  </li>
-                  <li>
-                    <input id="r8" type="radio" name="cat" value="language">
-                    <label for="r8">language</label>
-                  </li>
-                  <li>
-                    <input id="r9" type="radio" name="cat" value="misc">
-                    <label for="r9">misc</label>
-                  </li>
-                </ul>
-                <input type="text" id="emailInput" placeholder="your emailaddress to follow up">
-                <!--- also get the date, on click and store in a column in the db-->
-                <input type="button" class="inputButton bold" id="inputButton" value="create a new card">
+                      
+              <form class="form" action="" autocomplete="off">
+                <div class="left-wrap">
+                  <label for="locationInput">Title of your skill request/offer:<br></label>
+                  <input type="text" id="titleInput" placeholder="title" required="required" autofocus><br>
+                  <label for="locationInput">Describe your skill offer or request:<br></label>
+                  <input type="text" id="descInput" placeholder="the skill or tools you have to offer" autofocus><br>
+                </div>
+                <div class="right-wrap">
+                  <label for="nameInput">Your name or moniker:<br></label>
+                  <input type="text" id="nameInput" placeholder="required"><br>
+                  <label for="locationInput">Where:<br></label>
+                  <input type="text" id="locationInput" placeholder="where?"><br>
+                  
+                  <ul>
+                    <li>
+                      <input id="r1" type="radio" name="cat" value="fixing">
+                      <label for="r1">fixing</label>
+                    </li>
+                    <li>
+                      <input id="r2" type="radio" name="cat" value="music">
+                      <label for="r2">music</label>
+                    </li>
+                    <li>
+                      <input id="r3" type="radio" name="cat" value="health">
+                      <label for="r3">health & care</label>
+                    </li>
+                    <li>
+                      <input id="r4" type="radio" name="cat" value="creativity">
+                      <label for="r4">creativity</label>
+                    </li>
+                    <li>
+                      <input id="r5" type="radio" name="cat" value="organisation">
+                      <label for="r5">organisation</label>
+                    </li>
+                    <li>
+                      <input id="r6" type="radio" name="cat" value="plants">
+                      <label for="r6">plants</label>
+                    </li>
+                    <li>
+                      <input id="r7" type="radio" name="cat" value="construction">
+                      <label for="r7">construction</label>
+                    </li>
+                    <li>
+                      <input id="r8" type="radio" name="cat" value="language">
+                      <label for="r8">language</label>
+                    </li>
+                    <li>
+                      <input id="r9" type="radio" name="cat" value="misc">
+                      <label for="r9">misc</label>
+                    </li>
+                  </ul>
+                  <label for="emailInput">Your email address for the follow up of your card:<br></label>
+                  <input type="text" id="emailInput" placeholder="required"><br>
+                  <!--- also get the date, on click and store in a column in the db-->
+                  <input type="button" class="inputButton bold" id="inputButton" value="create a new card +">
+                </div>
               </form>
 
-            </div>
+            </div><!-- end .card-create-->
             <div class="card-create-category bold"></div>
-          </div><!--end card-wrapper-->
+          </div><!-- end .card-wrapper-->
+        </div><!--end .abody-->
+      </div><!--#navi-->
+    </div><!-- end flex wrapper-->
 
-        </div><!--end abody-->
-  
-      </div>
-
-
-    </div>
   </header>  
+
   <section id="categories">
     <ul>
       <li class="fixing"><a href="#" class="bold">fixing</a></li>

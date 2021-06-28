@@ -8,15 +8,6 @@ body{
     margin:0;
     padding:0;
 }
-/* fixing: rgb(200,174,219);
-music: rgb(26,88,251);
-creativity: rgb(212,175,0)
-organisation: rgb(127,90,17);
-plants: rgb(11,233,5);
-language: rgb(107,190,244);
-construction: rgb(219,16,1);
-misc: rgb(162,63,185);
-background: rgb(30,30,30); */
 .bold{
     font-family: 'NotCourierSansBold', serif; 
     font-style: normal; 
@@ -24,9 +15,6 @@ background: rgb(30,30,30); */
 }
 
 /* header section */
-header{
-    
-}
 .flex-wrapper{
     display: flex;
     justify-content: space-between;
@@ -35,7 +23,7 @@ header{
 }
 header h1{
     text-transform: uppercase;
-    font-size: 6em;
+
     margin: 0;
     padding:0;
 }
@@ -45,37 +33,62 @@ header .title{
 header #navi{
     text-transform: uppercase;
     font-size:3em;
-    float:right;
     list-style: none;
     padding: 0;
-    text-align: right;
     margin:0 0 30px 0;
     flex:1;
 }
 .card-create{
-    background-color: rgb(171, 171, 171);
-    color: rgb(30,30,30);
+    background-color: rgb(30,30,30);
+    color: beige;
+    border: 1px dashed beige;
     padding:15px;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 .inputButton{
     padding: 8px 15px 10px 15px;
     margin: 10px;
     color:rgb(30,30,30);
-    border-radius: 15px; 
+    border-radius: 5px; 
     border: 1px solid rgb(30,30,30);
     background-color: cadetblue;
+    position: absolute;
+    bottom:0;
+    right:0;
+}
+#titleInput, #nameInput, #locationInput, #emailInput{
+    width: 500px;
 }
 #descInput{
-
+    height: 500px;
+    width: 500px;
 }
 input{
+    border-radius: 5px;
+    padding:5px;
+    margin:10px 20px 20px 0;
+    font-size:16px;
+    background-color: rgb(247, 247, 237);
+}
+#r1, #r2, #r3, #r4, #r5, #r6, #r7, #r8, #r9{
+    margin:0px 0px 10px 0;
+}
+#navi ul{
+    margin: 0 0 20px 0;
+}
+#navi ul p{
+    margin-bottom:10px;
+}
+::placeholder {
+    color: rgb(174, 174, 174);
     font-size:16px;
     font-style: italic;
-    color: grey;
-    border-radius: 15px;
-    padding:5px;
-    margin:5px;
+  }
+label{
+    margin-top:10px !important;;
+  }
+form{
+    display: flex;
 }
 form ul{
     margin:0;
@@ -86,23 +99,35 @@ form ul{
     -webkit-columns: 2;
     -moz-columns: 2;
 }
+.left-wrap{
+}
+.right-wrap{
+    position:relative;
+}
+.create-card-wrapper{
+    margin: 25px 0px;
+    display: flex;
+    text-align: left;
+}
 
 .card-create-category{
     padding:10px 15px;
-    width: 100px;
+    width: auto;
+    min-width: 70px;
     height: 35px;
     border-radius: 10px 10px 0 0;
-    transform: rotate(90deg) translate(38px, 25px);
+    transform-origin:  bottom left;
+    transform: rotate(90deg) translate(-55px, 10px);
     font-size:1.2em;
     background-color: grey;
     color:rgb(30,30,30);
     text-align: center;
     z-index: -10;
+    
     /* should put a js thing that reads how wide the tab is, and put that value in the translate x */
 }
 
 /* row of category buttons */
-
 #categories{ 
     padding:30px;
     border-top: 0.01em solid beige;
@@ -240,7 +265,6 @@ h2{
     max-height: 0; 
     height: auto;
     font-size:16px;
-    margin-left:150px;
     text-transform: none;
   }
   .about-body{
@@ -252,6 +276,6 @@ h2{
   }
   /* (C2) OPEN TAB - SHOW CONTENT */
   .ahead.open + .abody {
-    max-height: 600px; 
+    max-height: 800px; 
     padding: 10px;
   }
