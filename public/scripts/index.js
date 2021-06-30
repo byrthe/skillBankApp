@@ -11,7 +11,7 @@ const imageInput = document.querySelector('#imageInput');
 const emailInput = document.querySelector('#emailInput');
 const catFix = document.querySelector('#r1');
 const catMusic = document.querySelector('#r2');
-const catHealth = document.querySelector('#r3');
+const catCare = document.querySelector('#r3');
 const catCreativity = document.querySelector('#r4');
 const catOrganisation = document.querySelector('#r5');
 const catPlants = document.querySelector('#r6');
@@ -22,6 +22,22 @@ const radioInput = "?";
 // variables of card to fill in
 const offerBox = document.querySelector('#right');
 // const currentDate = ;
+const catButtons = document.querySelectorAll('#categories ul li');
+
+
+catButtons.forEach((catButton) => {
+  catButton.addEventListener('click', (e) => {
+    console.log(catButton.innerText);
+    const allCards = document.querySelectorAll('.card-wrapper');
+    allCards.forEach((card) => {
+      if(catButton.innerText != card.dataset.category && catButton.dataset.flag == "include"){
+        card.style.display = "none";
+      }else{
+        card.style.display = "flex";
+      }
+    });
+  });
+});
 
 
 const sendOfferToServer = (offer) => {
@@ -89,7 +105,7 @@ const fetchAllOffersFromDB = () => {
         };
         // insert cards from de DB
         offerBox.insertAdjacentHTML('beforeend', 
-            `<div class="card-wrapper" style="transform: rotate(${randomAngle}deg);">
+            `<div class="card-wrapper" data-category=${input.category} style="transform: rotate(${randomAngle}deg);">
                 <div class="card-request">
                     <div class="title bold">${input.title}</div>
                     <div class="desc">${input.desc}</div>
@@ -126,9 +142,9 @@ catMusic.addEventListener('click', e = () =>{
     createLabel.style.backgroundColor = "rgb(26,88,251)";
     createLabel.innerHTML = "music";
 });
-catHealth.addEventListener('click', e = () =>{
+catCare.addEventListener('click', e = () =>{
     createLabel.style.backgroundColor = "rgb(97,122,215)";
-    createLabel.innerHTML = "health & care";
+    createLabel.innerHTML = "care";
 });
 catCreativity.addEventListener('click', e = () =>{
     createLabel.style.backgroundColor = "rgb(212,175,0)";

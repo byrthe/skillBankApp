@@ -31,7 +31,7 @@
               <form class="form" action="" autocomplete="off">
                 <div class="left-wrap">
                   <label for="titleInput">Title of your skill request/offer:<br></label>
-                  <input type="text" id="titleInput" placeholder="required" required="required" autofocus><br>
+                  <input type="text" id="titleInput" placeholder="required" required autofocus /><br>
                   <label for="descInput">Describe your skill offer or request:<br></label>
                   <input type="text" id="descInput" placeholder="required" autofocus><br>
                 </div>
@@ -54,8 +54,8 @@
                       <label for="r2">music</label>
                     </li>
                     <li>
-                      <input id="r3" type="radio" name="cat" value="health">
-                      <label for="r3">health & care</label>
+                      <input id="r3" type="radio" name="cat" value="care">
+                      <label for="r3">care</label>
                     </li>
                     <li>
                       <input id="r4" type="radio" name="cat" value="creativity">
@@ -100,15 +100,16 @@
 
   <section id="categories">
     <ul>
-      <li class="fixing"><a href="#" class="bold">fixing</a></li>
-      <li class="health"><a href="#" class="bold">health & care</a></li>
-      <li class="music"><a href="#" class="bold">music</a></li>
-      <li class="creativity"><a href="#" class="bold">creativity</a></li>
-      <li class="orga"><a href="#" class="bold">organisation</a></li>
-      <li class="plants"><a href="#" class="bold">plants</a></li>
-      <li class="construction"><a href="#" class="bold">construction</a></li>
-      <li class="language"><a href="#" class="bold">language</a></li>
-      <li class="misc"><a href="#" class="bold">misc</a></li>
+      <li class="fixing" data-flag="include"><a href="#" class="bold">fixing</a></li>
+      <li class="care" data-flag="include"><a href="#" class="bold">care</a></li>
+      <li class="music" data-flag="include"><a href="#" class="bold">music</a></li>
+      <li class="creativity" data-flag="include"><a href="#" class="bold">creativity</a></li>
+      <li class="orga" data-flag="include"><a href="#" class="bold">organisation</a></li>
+      <li class="plants" data-flag="include"><a href="#" class="bold">plants</a></li>
+      <li class="construction" data-flag="include"><a href="#" class="bold">construction</a></li>
+      <li class="language" data-flag="include"><a href="#" class="bold">language</a></li>
+      <li class="misc" data-flag="include"><a href="#" class="bold">misc</a></li>
+      <li class="all"><a href="#" class="bold">all</a></li>
     </ul>
   </section>
 
@@ -166,34 +167,7 @@
 
       <div id="right">
         <h2 class="bold">i can offer</h2>
-        <div class="card-wrapper">
-          <div class="card-request">
-            <div class="title bold">Bike Atelier</div>
-            <div class="desc">
-              A new bike atelier is opening. You can come and fix your own bike. There are all the tools you need and some people with experience to show you how to get started. It’s the point to share knowledge and learn together. You are very welcome too, if you have know-how on bikes and want to help others. The atelier works on prix-libre.<br>
-              At imperdiet dui accumsan sit amet nulla. Sed nisi lacus sed viverra. Tristique sollicitudin nibh sit amet commodo nulla facilisi nullam. Morbi tristique senectus et netus et malesuada. Viverra justo nec ultrices dui sapien. Aliquam faucibus purus in massa. Vitae congue mauris rhoncus aenean vel elit scelerisque. Duis at tellus at urna. Volutpat maecenas volutpat blandit aliquam etiam erat. Est placerat in egestas erat imperdiet. Ornare arcu odio ut sem.
-            </div>
-            <div class="info-wrapper">
-              <div class="name">added by:<br><span class="bold">name name</span></div>
-              <div class="date">added on:<br><span class="bold">12-06-2021</span></div>
-              <div class="location">location:<br><span class="bold">Anderlecht</span></div>
-            </div>
-          </div>
-          <div class="card-request-category fixing bold">fixing</div>
-        </div><!--end card-wrapper-->
-
-        <div class="card-wrapper">
-          <div class="card-request">
-            <div class="title bold">Conversation Tables</div>
-            <div class="desc">We are hosting weekly conversation tables for french and dutch learners at our local café in Forest. Be welcome to join us around 18h on Wednesdays. Snacks provided ;-)</div>
-            <div class="info-wrapper">
-              <div class="name">added by:<br><span class="bold">name name</span></div>
-              <div class="date">added on:<br><span class="bold">12-06-2021</span></div>
-              <div class="location">location:<br><span class="bold">Forest Bruxelles</span></div>
-            </div>
-          </div>
-          <div class="card-request-category language bold">language</div>
-        </div><!--end card-wrapper-->
+        
 
         
 

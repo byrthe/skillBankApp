@@ -163,14 +163,16 @@ form ul{
 }
 .fixing {background-color: rgb(200,174,219);}
 .music {background-color: rgb(26,88,251);}
-.health{background-color: rgb(97,122,215);}
+.care{background-color: rgb(97,122,215);}
 .creativity{ background-color:rgb(212,175,0);}
 .orga{ background-color:rgb(127,90,17);}
 .plants{ background-color: rgb(11,233,5);}
 .language{ background-color:rgb(107,190,244);}
 .construction{ background-color:rgb(219,16,1);}
+.organisation{background-color: rgb(127,90,17);}
 .misc{background-color: rgb(162,63,185);}
-
+.all{color: rgb(30,30,30); background-color: beige;}
+.all:hover{background-color: rgb(30,30,30);}
 #main-content{
     display: flex;
 }
@@ -210,8 +212,8 @@ h2{
 .card-wrapper img{
     margin-top:10px;
     width: 60%;
-    border-radius: 15px;
-    border: 1px solid rgb(142, 142, 142);
+    border-radius: 10px;
+    border: 0 solid rgb(142, 142, 142);
 }
 .imgHide{
     display: none;
