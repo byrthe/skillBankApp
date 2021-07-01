@@ -98,14 +98,15 @@ const fetchAllOffersFromDB = () => {
       console.log('Success:', data);
       data.input.forEach((input) => {
        // get random number between -5 and 5
-        const randomAngle = Math.ceil(Math.random() * 4) * (Math.round(Math.random()) ? 1 : -1)
+        // const randomAngle = Math.ceil(Math.random() * 4) * (Math.round(Math.random()) ? 1 : -1);
         let showToggle = "imgHide";
         if(input.img != null){
           showToggle = "imgShow";
         };
         // insert cards from de DB
         offerBox.insertAdjacentHTML('beforeend', 
-            `<div class="card-wrapper" data-category=${input.category} style="transform: rotate(${randomAngle}deg);">
+          // <div class="card-wrapper" data-category=${input.category} style="transform: rotate(${randomAngle}deg);">
+            `<div class="card-wrapper" data-category=${input.category}>
                 <div class="card-request">
                     <div class="title bold">${input.title}</div>
                     <div class="desc">${input.desc}</div>

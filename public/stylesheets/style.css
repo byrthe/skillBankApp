@@ -1,12 +1,16 @@
+/* OVERALL STYLES */
 *{
     font-family: 'NotCourierSansRegular';
+    border: 1px solid blue;
 }
 body{
+    width: 100%;
     background-color: rgb(30,30,30);
     color:beige;
     font-size: 16px;
     margin:0;
     padding:0;
+    
 }
 .bold{
     font-family: 'NotCourierSansBold', serif; 
@@ -14,29 +18,26 @@ body{
     font-weight: bold;
 }
 
-/* header section */
+/* HEADER SECTION */
 .flex-wrapper{
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
-    padding: 20px 30px;
-    align-items: flex-end;
+    align-items: flex-start;
+    width: 100%;
 }
 header h1{
     text-transform: uppercase;
-
     margin: 0;
     padding:0;
 }
-header .title{
-    flex:2;
-}
 header #navi{
     text-transform: uppercase;
-    font-size:3em;
     list-style: none;
     padding: 0;
-    margin:0 0 30px 0;
+    margin:0 0 30px 30px;
     flex:1;
+    width: 100%;
 }
 .card-create{
     background-color: rgb(40, 40, 40);
@@ -112,7 +113,6 @@ form ul{
     display: flex;
     text-align: left;
 }
-
 .card-create-category{
     padding:10px 15px;
     width: auto;
@@ -126,11 +126,9 @@ form ul{
     color:rgb(30,30,30);
     text-align: center;
     z-index: -10;
-    
-    /* should put a js thing that reads how wide the tab is, and put that value in the translate x */
 }
 
-/* row of category buttons */
+/* CATEGORY SORT BUTTONS  */
 #categories{ 
     padding:30px;
     border-top: 0.01em solid beige;
@@ -173,16 +171,23 @@ form ul{
 .misc{background-color: rgb(162,63,185);}
 .all{color: rgb(30,30,30); background-color: beige;}
 .all:hover{background-color: rgb(30,30,30);}
+
+
+/* CARDS SECTION */
 #main-content{
     display: flex;
+    flex-flow: row wrap;
+    width: 100%;
 }
 
 #left{
     border-right: 1px solid beige;
     flex: 1;
+    width: 100%;
 }
 #right{
     flex: 1;
+    width: 100%;
 }
 h2{
     text-transform: uppercase;
@@ -192,17 +197,20 @@ h2{
 .card-wrapper{
     margin: 25px 25px;
     display: flex;
+    flex-flow: row nowrap;
     justify-content: center;
     text-align: left;
+    align-self: flex-start;
 }
 .card-request, .card-offer{
     background-color: beige;
     color: rgb(30,30,30);
     padding:15px;
     border-radius: 15px;
-    width: 650px;
+    /* width: 650px; */
     overflow-wrap: break-word;
     margin-bottom:15px;
+    
 }
 .title{
     text-transform: uppercase;
@@ -241,49 +249,42 @@ h2{
     color:rgb(30,30,30);
     text-align: center;
     z-index: -10;
-    /* should put a js thing that reads how wide the tab is, and put that value in the translate x */
 }
 
-/* // js random rotate of the cards */
-
-
-
-/* // accordion styles */
-
-/* (A) ACCORDION WRAPPER */
-.awrap {
-
-  }
-  
-  /* (B) HEADER TAB */
-  /* (B1) TAB ITSELF */
+/* ACCORDION HEADER */
   .ahead {
     position: relative;
     cursor: pointer;
+    width: 100%;
   }
   /* (B2) RIGHT ARROW */
   .ahead:after {
+    width: 80%;
     position: absolute;
     right: 10px;
     transition: transform 0.2s;
   }
-  
-  /* (C) CONTENT TAB */
-  /* (C1) TAB ITSELF - CLOSED BY DEFAULT */
+  .ahead.title{
+    font-size: 4.5em;
+  }
+  .ahead.create{
+    font-size: 3em;
+  }
   .abody {
+    width: 95%;
     overflow: hidden;
     transition: all 0.4s ease; 
     max-height: 0; 
     height: auto;
-    font-size:16px;
     text-transform: none;
+    word-wrap:break-word;
+    font-size: 1.5em;
   }
   .abody p{
-      font-size: 25px;
+      
   }
   .about-body{
-    font-size:25px;
-    line-height: 0.9em;
+
   }
   /* (C2) OPEN TAB - DOWN ARROW */
   .ahead.open:after {
@@ -291,6 +292,6 @@ h2{
   }
   /* (C2) OPEN TAB - SHOW CONTENT */
   .ahead.open + .abody {
-    max-height: 800px; 
+    max-height: 4000px; 
     padding: 10px;
   }

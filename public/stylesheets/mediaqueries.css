@@ -1,0 +1,62 @@
+all rules outside of @media queries apply to devices 1201px and above
+
+
+@media (max-width: 1200px) {
+    
+}
+
+
+
+@media (max-width: 992px) {	
+	
+}
+
+
+
+
+@media (max-width: 768px) {
+    body{
+        font-size: 14px;
+    }
+	#main-content{
+        flex-direction: column;
+    }
+    header #navi{
+        margin:0 0 10px 0px;
+    }
+    .ahead.title{
+        font-size: 2em;
+      }
+      .ahead.create{
+        font-size: 1.5em;
+      }
+    .abody, .abody p{
+        padding:0;
+        margin: 0;
+        font-size:1.2em;
+    }  
+    form{
+        flex-flow: column wrap;
+    }
+    .card-wrapper{}
+    .inputButton{
+        position: relative;
+    }
+    #titleInput, #nameInput, #locationInput, #emailInput, #imageInput{
+        width: 80%;
+    }
+    #descInput{
+        height: 80%;
+        width: 80%;
+    }
+    .card-create{
+        font-size:0.8em;
+    }
+    #categories{
+        padding:0;
+    }
+}
+
+@media (max-width: 480px) {
+	
+}

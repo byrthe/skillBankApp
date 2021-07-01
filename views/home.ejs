@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,
   initial-scale=1.0">
   <link rel="stylesheet" href="/static/stylesheets/style.css" type="text/css">
+  <link rel="stylesheet" href="/static/stylesheets/mediaqueries.css" type="text/css">
   <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/notcouriersans" type="text/css"/> 
   <title>Skill Bank</title>
 </head>
@@ -22,7 +23,7 @@
           This is not a place for paid services, but really a place to connect and advance our knowledge collectively.
         </div>
 
-        <div class="ahead bold"><a>Create a card</a></div>
+        <div class="ahead create bold"><a>Create a card</a></div>
         <div class="abody">
           <p>Add your request or offer with the following form. You will be updated via the email address you provide.</p>
           <div class="create-card-wrapper">
@@ -84,7 +85,12 @@
                   </ul>
                   <label for="emailInput">Your email address for the follow up of your card:<br></label>
                   <input type="text" id="emailInput" placeholder="required"><br>
-                  <!--- also get the date, on click and store in a column in the db-->
+                  <label>Is this a request or an offer?<br></label>
+                  
+                  <input id="r10" type="radio" name="cardType" value="request">
+                  <label for="r10">request</label>
+                  <input id="r11" type="radio" name="cardType" value="offer">
+                  <label for="r11">offer</label>
                   <input type="button" class="inputButton bold" id="inputButton" value="create a new card +">
                 </div>
               </form>
