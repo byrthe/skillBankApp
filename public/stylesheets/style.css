@@ -26,6 +26,8 @@ body{
     align-items: flex-start;
     width: 100%;
 }
+
+
 header h1{
     text-transform: uppercase;
     margin: 0;
@@ -39,6 +41,8 @@ header #navi{
     flex:1;
     width: 100%;
 }
+
+
 .card-create{
     background-color: rgb(40, 40, 40);
     color: beige;
