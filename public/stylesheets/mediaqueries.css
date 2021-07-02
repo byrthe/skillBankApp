@@ -1,4 +1,4 @@
-all rules outside of @media queries apply to devices 1201px and above
+/* all rules outside of @media queries apply to devices 1201px and above */
 
 
 @media (max-width: 1200px) {
