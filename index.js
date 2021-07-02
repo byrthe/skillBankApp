@@ -3,11 +3,11 @@ const express = require("express");
 const app = express();
 const cloudinary = require('cloudinary').v2;
 // cloudinary 
-cloudinary.config({ 
-  cloud_name: 'dcgjw1jo2', 
-  api_key: '112798183422761', 
-  api_secret: 'e8yTNBYPerT_K8iQc-lJJBIFSDE' 
-});
+// cloudinary.config({ 
+//   cloud_name: 'dcgjw1jo2', 
+//   api_key: '112798183422761', 
+//   api_secret: 'e8yTNBYPerT_K8iQc-lJJBIFSDE' 
+// });
 
 const controller = require("./controllers/controller")
 
@@ -29,6 +29,12 @@ app.get('/',(req, res) => {
 app.post('/api/skillBank/addOffer', (req, res) => {
   console.log('from the brain i print:', req.body);
   controller.addOfferToDB(req.body);
+});
+
+
+app.post('/api/skillBank/addOfferWPic', (req, res) => {
+  console.log('from the brain i print:', req.body);
+  controller.addOfferToDBWPic(req.body);
 });
 
 app.post('/api/skillBank/allOffers', (req, res) => {

@@ -22,7 +22,7 @@
         flex-direction: column;
     }
     header #navi{
-        margin:0 0 10px 0px;
+        margin:0 0 10px 10px;
     }
     .ahead.title{
         font-size: 2em;
@@ -54,6 +54,17 @@
     }
     #categories{
         padding:0;
+    }
+    #categories li{
+        font-size: 0.8em;
+        padding: 5px 10px 8px 10px;
+        margin: 5px;
+    }
+    #left{
+        border-right:0px;
+        border-bottom: 1px solid beige;
+    }
+    #right{
     }
 }
 

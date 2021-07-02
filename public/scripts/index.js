@@ -24,16 +24,7 @@ const requestBox = document.querySelector('#left');
 const offerBox = document.querySelector('#right');
 // const currentDate = ;
 const catButtons = document.querySelectorAll('#categories ul li');
-
-var myWidget = cloudinary.createUploadWidget({
-  cloudName: 'dcgjw1jo2', 
-  uploadPreset: 'wp5wncyp', folder: 'widgetUpload', cropping: true}, 
-  (error, result) => { 
-      if (!error && result && result.event === "success") { 
-        console.log('Done! Here is the image info: ', result.info); 
-      }
-    // console.log(error, result) 
-  })
+let img_url;
 
 catButtons.forEach((catButton) => {
   catButton.addEventListener('click', (e) => {
@@ -67,6 +58,37 @@ const sendOfferToServer = (offer) => {
     });
 };
 
+var myWidget = cloudinary.createUploadWidget({
+  cloudName: 'dcgjw1jo2', 
+  uploadPreset: 'wp5wncyp', folder: 'widgetUpload'}, 
+  (error, result) => { 
+      if (!error && result && result.event === "success") { 
+        console.log('Done! Here is the image info: ', result.info); 
+        img_url = result.info.secure_url;
+        console.log(img_url);
+      };
+    
+    // console.log(error, result)
+  });
+
+
+const sendOfferToServerWPic = (offer) => {
+  fetch('api/skillBank/addOfferWPic', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(offer),
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log('Success:', data);
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
+};
+
 
 // input button events
 inputButton.addEventListener('click', (e) => {
@@ -75,7 +97,6 @@ inputButton.addEventListener('click', (e) => {
     console.log(descInput.value);
     console.log(nameInput.value);
     console.log(locationInput.value);
-    console.log(imageInput.value);
     console.log(emailInput.value);
     // category radio buttons
     const rbs = document.querySelectorAll('input[name="cat"]');
@@ -96,14 +117,13 @@ inputButton.addEventListener('click', (e) => {
         }
     };
             
-    sendOfferToServer({inputTitle: titleInput.value, inputDesc: descInput.value, inputName: nameInput.value, inputEmail: emailInput.value, inputLocation: locationInput.value,inputImage: imageInput.value, inputRadio: selectedValue, inputType: typeValue});
+    sendOfferToServer({inputTitle: titleInput.value, inputDesc: descInput.value, inputName: nameInput.value, inputEmail: emailInput.value, inputImage: img_url, inputLocation: locationInput.value, inputRadio: selectedValue, inputType: typeValue});
     console.log({inputType: selectedValue});
 
     location.reload();
 });
 
 const imageUpload = document.querySelector('#imageUpload');
-imageUpload.style.backgroundColor = 'red';
 
 imageUpload.addEventListener('click', (event) => {
   myWidget.open();

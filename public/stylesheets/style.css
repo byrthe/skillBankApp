@@ -1,7 +1,7 @@
 /* OVERALL STYLES */
 *{
     font-family: 'NotCourierSansRegular';
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 }
 body{
     width: 100%;
@@ -26,8 +26,6 @@ body{
     align-items: flex-start;
     width: 100%;
 }
-
-
 header h1{
     text-transform: uppercase;
     margin: 0;
@@ -41,8 +39,6 @@ header #navi{
     flex:1;
     width: 100%;
 }
-
-
 .card-create{
     background-color: rgb(40, 40, 40);
     color: beige;
@@ -60,6 +56,22 @@ header #navi{
     position: absolute;
     bottom:0;
     right:0;
+    text-transform: uppercase;
+}
+#imageUpload{
+    padding: 8px 15px 10px 15px;
+    margin: 10px 0 20px 0;
+    color:rgb(30,30,30);
+    border-radius: 5px; 
+    border: 1px solid rgb(30,30,30);
+    background-color: cadetblue;
+    bottom:0;
+    right:0;
+    font-family: 'NotCourierSansBold', serif;
+    font-size:0.8em;
+}
+.imgUpload{
+    margin: 20px 0;
 }
 #titleInput, #nameInput, #locationInput, #emailInput, #imageInput{
     width: 500px;
@@ -111,9 +123,11 @@ form ul{
     -moz-columns: 2;
 }
 .left-wrap{
+    margin-bottom:50px;
 }
 .right-wrap{
     position:relative;
+    
 }
 .create-card-wrapper{
     margin: 25px 0px;
@@ -285,7 +299,7 @@ h2{
     height: auto;
     text-transform: none;
     word-wrap:break-word;
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
   .abody p{
       
