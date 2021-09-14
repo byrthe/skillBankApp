@@ -1,4 +1,4 @@
-# skillBankApp
+# Skill Bank
 
 ![alt text](skillbank1.png)
 
